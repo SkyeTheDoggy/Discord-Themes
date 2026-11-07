@@ -7,6 +7,8 @@
  * @website https://git.doggy.moe/SkyeTheDoggy/Discord-Themes
  */
 
+/* NOTE: Originally created by chloecinders (https://github.com/chloecinders/visual-refresh-compact-title-bar). Since it's discontinued/broken, I patched it up and added some tweaks. */
+
 :root,
 .visual-refresh {
     --vr-header-snippet-space: 220px;
