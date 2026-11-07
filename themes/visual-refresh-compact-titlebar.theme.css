@@ -10,7 +10,9 @@
 /* 
 NOTE: Originally created by chloecinders (https://github.com/chloecinders/visual-refresh-compact-title-bar).
 Since it's discontinued/broken, I patched it up and added some tweaks.
-Please also note that my version doesn't separate browser, desktop, and hidden modes. It only works if you're using Discord in a browser or have a native system title bar enabled.
+
+Please also note that my version doesn't separate browser, desktop, and hidden modes.
+It only works if you're using Discord in a browser or have a native system title bar enabled.
 */
 
 :root,
