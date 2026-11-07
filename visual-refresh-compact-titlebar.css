@@ -1,0 +1,118 @@
+/**
+ * @name Discord Desktop Refresh Fixer
+ * @description Fixes the new topbar pushed in recent Discord updates from taking up a pointless amount of vertical space on systems with a native system topbar or in browsers.
+ * @version 0.0.2
+ * @author SkyeTheDoggy
+ * @authorId 679270448931930145
+ * @website https://git.doggy.moe/SkyeTheDoggy/Discord-Themes
+ */
+
+:root,
+.visual-refresh {
+    --vr-header-snippet-space: 220px;
+}
+
+.visual-refresh {
+    --vr-header-snippet-top: 0px;
+    --vr-header-snippet-server-padding: 16px;
+
+    div[class*='chat_']:not([class*='threadSidebarOpen']) section[class*='container_'],
+    main[class*='container_'] section[class*='container_'],
+    div[class*='chatLayerWrapper_'] section[class*='container_'],
+    div[class*='headerBar_'][class*='overlay_'],
+    .shop_Mqg79R section[class*='showToolbar_'] {
+        padding-right: var(--vr-header-snippet-space);
+    }
+
+    div[class*='videoControls_'] div[class*='subtitleContainer_'] {
+        padding-right: calc(var(--vr-header-snippet-space) - 20px);
+    }
+
+    .shop_Mqg79R div[class*='balanceWidgetMenu_'] {
+        margin-right: 0;
+    }
+
+    div[class*='base_'] {
+        grid-template-rows: [top] 0 [titleBarEnd] min-content [noticeEnd] 1fr [contentEnd] min-content [end];
+
+        &>div[class*='bar_'] {
+            position: absolute;
+            top: var(--vr-header-snippet-top);
+            right: 0;
+            width: var(--vr-header-snippet-space);
+            height: var(--custom-channel-header-height, 48px);
+            padding: 0;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translateX(-12px);
+            pointer-events: auto !important;
+
+            & div[class*='backForwardButtons_'] {
+                display: flex;
+                align-items: center;
+                height: 100%;
+            }
+
+            & div[class*='backForwardButtons_'],
+            & button,
+            & div[class*='icon_'],
+            & svg {
+                pointer-events: auto !important;
+            }
+
+            &>div[class*='title_'] {
+                display: none;
+            }
+        }
+
+        &:has(> div[class*='notice_'])>div[class*='bar_'] {
+            top: 0;
+        }
+
+        &:has([class*='threadSidebarOpen'][class*='threadSidebarFloating'])>div[class*='bar_'] {
+            z-index: 0;
+        }
+
+        & div[class*='trailing_'] {
+            background: none;
+            border: none;
+            height: var(--custom-channel-header-height);
+            z-index: 1;
+            pointer-events: none;
+            margin-left: -6px;
+        }
+
+        & div[class*='toolbar_'] {
+            transform: translateX(-8px);
+        }
+
+        &>div[class*='content__'] {
+            z-index: 0;
+        }
+    }
+
+    .profileThemedContainer_MLLsfk .topRow_ebzPvR {
+        align-items: end;
+        padding-bottom: 0;
+
+        & .closeAction_ebzPvR {
+            -webkit-app-region: no-drag;
+        }
+
+        & .memberNameContainer_ebzPvR {
+            padding-bottom: 12px;
+        }
+    }
+
+    ul[data-list-id="guildsnav"]>div[class*='itemsContainer_']>div[class*='stack_'] {
+        margin-top: var(--vr-header-snippet-server-padding);
+    }
+
+    #balance-widget-pill,
+    .searchBar_AV6l5m,
+    .wishlistButton_ViLURN {
+        transform: translateX(calc(-1 * (var(--vr-header-snippet-space) - 16px)));
+    }
+}
