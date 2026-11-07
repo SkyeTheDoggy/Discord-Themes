@@ -2,4 +2,4 @@
 
 Some Discord themes I put together for my own setup. No promises they won't break, and don't count on me maintaining them!
 
-｡:ﾟ૮ ˶ˆ ﻌ ˆ˶ ა ﾟ:｡
+૮ ˶ˆ ﻌ ˆ˶ ა
