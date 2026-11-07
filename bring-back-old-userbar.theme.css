@@ -1,0 +1,48 @@
+/**
+ * @name Bring Back The Old Userbar
+ * @description Brings back the old userbar on Discord.
+ * @version 0.0.1
+ * @author SkyeTheDoggy
+ * @authorId 679270448931930145
+ * @website https://git.doggy.moe/SkyeTheDoggy/Discord-Themes
+ */
+
+.panels_pog62O {
+    max-width: calc(100% - 72px);
+    margin-left: 65px;
+    margin-bottom: -8px;
+    border: none !important;
+    border-radius: 0 !important;
+}
+
+.searchBar_u88IQl {
+    margin-top: 1px;
+}
+
+.listItemWrapper_tQErD4 {
+    margin-top: 8px;
+}
+
+.pill__1f388 {
+    margin-top: 4px;
+}
+
+.guilds_pog62O {
+    height: 100%;
+}
+
+.scroller_Bce46W {
+    margin-bottom: 56px !important;
+}
+
+.scroller_ysO7Gy {
+    margin-bottom: 0px !important;
+}
+
+.header_XH4OpX {
+    margin-top: 1px !important;
+}
+
+.sidebar_pog62O::after {
+    display: none;
+}
