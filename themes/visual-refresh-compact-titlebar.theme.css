@@ -1,13 +1,17 @@
 /**
  * @name Discord Visual Refresh Compact Topbar
- * @description Fixes the new topbar pushed in recent Discord updates from taking up a pointless amount of vertical space on systems with a native system topbar or in browsers.
+ * @description Fixes the new topbar pushed in recent Discord updates from taking up a pointless amount of vertical space on systems with a native system title bar or in browsers.
  * @version 0.0.2
  * @author SkyeTheDoggy
  * @authorId 679270448931930145
  * @website https://git.doggy.moe/SkyeTheDoggy/Discord-Themes
  */
 
-/* NOTE: Originally created by chloecinders (https://github.com/chloecinders/visual-refresh-compact-title-bar). Since it's discontinued/broken, I patched it up and added some tweaks. */
+/* 
+NOTE: Originally created by chloecinders (https://github.com/chloecinders/visual-refresh-compact-title-bar).
+Since it's discontinued/broken, I patched it up and added some tweaks.
+Please also note that my version doesn't separate browser, desktop, and hidden modes. It only works if you're using Discord in a browser or have a native system title bar enabled.
+*/
 
 :root,
 .visual-refresh {
