@@ -1,7 +1,7 @@
 /**
  * @name Discord Visual Refresh Compact Topbar
  * @description Fixes the new topbar pushed in recent Discord updates from taking up a pointless amount of vertical space on systems with a native system title bar or in browsers.
- * @version 0.0.2
+ * @version 0.0.3
  * @author SkyeTheDoggy
  * @website https://github.com/SkyeTheDoggy/Discord-Themes
  */
@@ -42,7 +42,7 @@ It only works if you're using Discord in a browser or have a native system title
     div[class*='base_'] {
         grid-template-rows: [top] 0 [titleBarEnd] min-content [noticeEnd] 1fr [contentEnd] min-content [end];
 
-        &>div[class*='bar_'] {
+        >div[class*='bar_'] {
             position: absolute;
             top: var(--vr-header-snippet-top);
             right: 0;
@@ -56,33 +56,25 @@ It only works if you're using Discord in a browser or have a native system title
             transform: translateX(-12px);
             pointer-events: auto !important;
 
-            & div[class*='backForwardButtons_'] {
-                display: flex;
-                align-items: center;
-                height: 100%;
-            }
-
-            & div[class*='backForwardButtons_'],
-            & button,
-            & div[class*='icon_'],
-            & svg {
+            div[class*='backForwardButtons_'],
+            button,
+            div[class*='icon_'],
+            svg {
                 pointer-events: auto !important;
             }
 
-            &>div[class*='title_'] {
+            >div[class*='title_'] {
                 display: none;
             }
         }
 
-        &:has(> div[class*='notice_'])>div[class*='bar_'] {
-            top: 0;
+        >div[class*='bar_'] div[class*='backForwardButtons_'] {
+            display: flex;
+            align-items: center;
+            height: 100%;
         }
 
-        &:has([class*='threadSidebarOpen'][class*='threadSidebarFloating'])>div[class*='bar_'] {
-            z-index: 0;
-        }
-
-        & div[class*='trailing_'] {
+        div[class*='trailing_'] {
             background: none;
             border: none;
             height: var(--custom-channel-header-height);
@@ -91,11 +83,11 @@ It only works if you're using Discord in a browser or have a native system title
             margin-left: -6px;
         }
 
-        & div[class*='toolbar_'] {
+        div[class*='toolbar_'] {
             transform: translateX(-8px);
         }
 
-        &>div[class*='content__'] {
+        >div[class*='content__'] {
             z-index: 0;
         }
     }
@@ -104,11 +96,11 @@ It only works if you're using Discord in a browser or have a native system title
         align-items: end;
         padding-bottom: 0;
 
-        & .closeAction_ebzPvR {
+        .closeAction_ebzPvR {
             -webkit-app-region: no-drag;
         }
 
-        & .memberNameContainer_ebzPvR {
+        .memberNameContainer_ebzPvR {
             padding-bottom: 12px;
         }
     }
