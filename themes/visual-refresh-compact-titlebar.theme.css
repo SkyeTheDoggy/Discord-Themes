@@ -1,7 +1,7 @@
 /**
  * @name Discord Visual Refresh Compact Topbar
  * @description Fixes the new topbar pushed in recent Discord updates from taking up a pointless amount of vertical space on systems with a native system title bar or in browsers.
- * @version 0.0.3
+ * @version 0.0.4
  * @author SkyeTheDoggy
  * @website https://github.com/SkyeTheDoggy/Discord-Themes
  */
@@ -113,5 +113,9 @@ It only works if you're using Discord in a browser or have a native system title
     .searchBar_AV6l5m,
     .wishlistButton_ViLURN {
         transform: translateX(calc(-1 * (var(--vr-header-snippet-space) - 16px)));
+    }
+
+    .buttonInner_zpnerZ {
+        margin-top: auto;
     }
 }
