@@ -49,7 +49,7 @@ It only works if you're using Discord in a browser or have a native system title
             width: var(--vr-header-snippet-space);
             height: var(--custom-channel-header-height, 48px);
             padding: 0;
-            z-index: 9999;
+            z-index: 999;
             display: flex;
             align-items: center;
             justify-content: center;
